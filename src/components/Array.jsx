@@ -19,9 +19,9 @@ function Array() {
 
             {/* Second way of doing the  same thing  using Filter */}
 
-            {/* <button onClick={() => setValue(() => value.filter((item, index) => index !== value.length - 1))} className="py-1 px-3 mt-2 bg-blue-500 rounded-full text-white"> Click me </button> */}
+            <button onClick={() => setValue(() => value.filter((item, index) => index !== value.length - 1))} className="py-1 px-3 mt-2 bg-blue-500 rounded-full text-white"> Click me </button>
            
-            <button onClick={() => setValue(value.filter(item => item%2 === 0))} className="py-1 px-3 mt-2 bg-blue-500 rounded-full text-white"> Click me </button>
+            {/* <button onClick={() => setValue(value.filter(item => item%2 === 0))} className="py-1 px-3 mt-2 bg-blue-500 rounded-full text-white"> Click me </button> */}
 
         </div>
 
