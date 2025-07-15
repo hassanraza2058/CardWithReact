@@ -12,14 +12,23 @@ function App() {
   ];
 
   const [value, setValue]= useState(data);
+
+  const ButtonHandleFunction = (changingIndex) => {
+    setValue ( prev => {
+      return prev.map((item, index)=>{
+        if (index === changingIndex) return {...item , friends: !item.friends};
+        return item;
+      })
+    })
+  }
   
   return (
 
-    <div className="w-full h-screen flex justify-center items-center bg-rose-300 gap-2">
+    <div className="w-full h-screen flex justify-center items-center bg-rose-300 gap-4">
       {
       // data.map((item, index) => <Card key={index} name ={item.name} profession={item.profession} image={item.image}/>)  
 
-      data.map((item, index) => <Card key={index} values = {item}/>)  
+      value.map((item, index) => <Card key={index} index ={index} values = {item} handleClickButton={ButtonHandleFunction} />)  
       }
     </div>
 
